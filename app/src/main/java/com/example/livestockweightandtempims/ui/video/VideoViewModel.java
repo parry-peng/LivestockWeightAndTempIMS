@@ -1,16 +1,16 @@
-package com.example.livestockweightandtempims.ui.settings;
+package com.example.livestockweightandtempims.ui.video;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class SettingsViewModel extends ViewModel {
+public class VideoViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public SettingsViewModel() {
+    public VideoViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is settings fragment");
+        mText.setValue("This is 视频 fragment");
     }
 
     public LiveData<String> getText() {

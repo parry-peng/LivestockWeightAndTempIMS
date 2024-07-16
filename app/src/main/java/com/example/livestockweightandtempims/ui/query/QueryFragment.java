@@ -1,4 +1,4 @@
-package com.example.livestockweightandtempims.ui.settings;
+package com.example.livestockweightandtempims.ui.query;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,22 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.livestockweightandtempims.databinding.FragmentSettingsBinding;
+import com.example.livestockweightandtempims.databinding.FragmentQueryBinding;
 
-public class SettingsFragment extends Fragment {
+public class QueryFragment extends Fragment {
 
-    private FragmentSettingsBinding binding;
+    private FragmentQueryBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        SettingsViewModel settingsViewModel =
-                new ViewModelProvider(this).get(SettingsViewModel.class);
+        QueryViewModel queryViewModel =
+                new ViewModelProvider(this).get(QueryViewModel.class);
 
-        binding = FragmentSettingsBinding.inflate(inflater, container, false);
+        binding = FragmentQueryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textSettings;
-        settingsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView = binding.textQuery;
+        queryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

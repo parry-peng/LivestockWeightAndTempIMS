@@ -3,29 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_transform">
+    app:startDestination="@+id/nav_homepage">
 
     <fragment
-        android:id="@+id/nav_transform"
-        android:name="com.example.livestockweightandtempims.ui.transform.TransformFragment"
+        android:id="@+id/nav_homepage"
+        android:name="com.example.livestockweightandtempims.ui.homepage.HomepageFragment"
         android:label="@string/menu_homepage"
-        tools:layout="@layout/fragment_transform" />
+        tools:layout="@layout/homepage_transform" />
 
     <fragment
-        android:id="@+id/nav_reflow"
-        android:name="com.example.livestockweightandtempims.ui.reflow.ReflowFragment"
+        android:id="@+id/nav_video"
+        android:name="com.example.livestockweightandtempims.ui.video.VideoFragment"
         android:label="@string/menu_video"
-        tools:layout="@layout/fragment_reflow" />
+        tools:layout="@layout/fragment_video" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.livestockweightandtempims.ui.slideshow.SlideshowFragment"
+        android:id="@+id/nav_enter"
+        android:name="com.example.livestockweightandtempims.ui.enter.EnterFragment"
         android:label="@string/menu_enter"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_enter" />
 
     <fragment
-        android:id="@+id/nav_settings"
-        android:name="com.example.livestockweightandtempims.ui.settings.SettingsFragment"
+        android:id="@+id/nav_query"
+        android:name="com.example.livestockweightandtempims.ui.query.QueryFragment"
         android:label="@string/menu_query"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/fragment_query" />
 </navigation>

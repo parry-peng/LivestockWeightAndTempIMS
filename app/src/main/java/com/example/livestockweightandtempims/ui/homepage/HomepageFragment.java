@@ -1,4 +1,4 @@
-package com.example.livestockweightandtempims.ui.transform;
+package com.example.livestockweightandtempims.ui.homepage;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.livestockweightandtempims.R;
-import com.example.livestockweightandtempims.databinding.FragmentTransformBinding;
+import com.example.livestockweightandtempims.databinding.HomepageTransformBinding;
 import com.example.livestockweightandtempims.databinding.ItemTransformBinding;
 
 import java.util.Arrays;
@@ -28,22 +28,22 @@ import java.util.List;
  * the [RecyclerView] using LinearLayoutManager in a small screen
  * and shows items using GridLayoutManager in a large screen.
  */
-public class TransformFragment extends Fragment {
+public class HomepageFragment extends Fragment {
 
-    private FragmentTransformBinding binding;
+    private HomepageTransformBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        TransformViewModel transformViewModel =
-                new ViewModelProvider(this).get(TransformViewModel.class);
+        HomepageViewModel homepageViewModel =
+                new ViewModelProvider(this).get(HomepageViewModel.class);
 
-        binding = FragmentTransformBinding.inflate(inflater, container, false);
+        binding = HomepageTransformBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         RecyclerView recyclerView = binding.recyclerviewTransform;
         ListAdapter<String, TransformViewHolder> adapter = new TransformAdapter();
         recyclerView.setAdapter(adapter);
-        transformViewModel.getTexts().observe(getViewLifecycleOwner(), adapter::submitList);
+        homepageViewModel.getTexts().observe(getViewLifecycleOwner(), adapter::submitList);
         return root;
     }
 

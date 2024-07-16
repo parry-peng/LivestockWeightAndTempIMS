@@ -1,16 +1,16 @@
-package com.example.livestockweightandtempims.ui.slideshow;
+package com.example.livestockweightandtempims.ui.query;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class SlideshowViewModel extends ViewModel {
+public class QueryViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public SlideshowViewModel() {
+    public QueryViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is slideshow fragment");
+        mText.setValue("This is 查询 fragment");
     }
 
     public LiveData<String> getText() {
