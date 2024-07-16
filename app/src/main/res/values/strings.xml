@@ -22,4 +22,12 @@
     <string name="image_view_item_transform_content_description">Represents an image view in the
         item
     </string>
+
+    <string name="enter_id_title">ID:</string>
+    <string name="enter_id_prompt">请输入ID号</string>
+    <string name="enter_weight_title">体重:</string>
+    <string name="enter_weight_prompt">请输入体重</string>
+    <string name="enter_temp_title">体温:</string>
+    <string name="enter_temp_prompt">请输入体温</string>
+
 </resources>

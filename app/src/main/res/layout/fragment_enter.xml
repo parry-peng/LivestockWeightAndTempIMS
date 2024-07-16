@@ -6,17 +6,81 @@
     android:layout_height="match_parent"
     tools:context=".ui.enter.EnterFragment">
 
-    <TextView
-        android:id="@+id/text_enter"
-        android:layout_width="match_parent"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <TextView
+        android:id="@+id/tv_enter_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_id_title"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="182dp" />
+
+    <EditText
+        android:id="@+id/et_enter_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="170dp"
+        tools:text="@string/enter_id_prompt" />
+
+    <TextView
+        android:id="@+id/tv_enter_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_weight_title"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="261dp" />
+
+    <TextView
+        android:id="@+id/tv_enter_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_temp_title"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="342dp" />
+
+    <EditText
+        android:id="@+id/et_enter_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/enter_weight_prompt"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="261dp" />
+
+    <EditText
+        android:id="@+id/et_enter_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/enter_temp_prompt"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="329dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_enter"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="607dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
