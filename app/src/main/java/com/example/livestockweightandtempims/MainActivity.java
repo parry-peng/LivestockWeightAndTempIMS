@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = binding.appBarMain.contentMain.bottomNavView;
         if (bottomNavigationView != null) {
             mAppBarConfiguration = new AppBarConfiguration.Builder(
-                    R.id.nav_transform, R.id.nav_reflow, R.id.nav_slideshow)
+                    R.id.nav_transform, R.id.nav_reflow, R.id.nav_slideshow, R.id.nav_settings)
                     .build();
             NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
             NavigationUI.setupWithNavController(bottomNavigationView, navController);
