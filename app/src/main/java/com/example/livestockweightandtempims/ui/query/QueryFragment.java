@@ -24,8 +24,8 @@ public class QueryFragment extends Fragment {
         binding = FragmentQueryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textQuery;
-        queryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+//        final TextView textView = binding.textQuery;
+//        queryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
