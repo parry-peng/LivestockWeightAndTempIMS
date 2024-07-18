@@ -11,7 +11,7 @@ public class MyApplication extends Application {
     public static MyApplication getInstance() {
         return mApp;
     }
-    public LivestockDatabase getBookDB() {
+    public LivestockDatabase getLivestockDB() {
         return livestockDatabase;
     }
 
