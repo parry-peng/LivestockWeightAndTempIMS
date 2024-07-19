@@ -17,8 +17,7 @@ public class EnterViewModel extends ViewModel {
         mText = new MutableLiveData<>();
         mText.setValue("This is 数据录入 fragment");
 
-        LivestockDatabase db = MyApplication.getInstance().getLivestockDB();
-        livestockDao = db.livestockDao();
+        livestockDao = MyApplication.getInstance().getLivestockDB().livestockDao();
     }
 
     public LiveData<String> getText() {

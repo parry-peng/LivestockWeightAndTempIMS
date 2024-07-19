@@ -26,8 +26,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="number"
-            android:hint="Enter ID value"
-            android:text="@string/enter_id_prompt" />
+            android:hint="@string/enter_id_prompt"/>
     </LinearLayout>
 
     <LinearLayout
@@ -50,7 +49,7 @@
             android:ems="10"
             android:inputType="numberDecimal"
             android:minHeight="48dp"
-            android:text="@string/enter_weight_prompt" />
+            android:hint="@string/enter_weight_prompt" />
     </LinearLayout>
 
     <LinearLayout
@@ -73,7 +72,7 @@
             android:ems="10"
             android:inputType="numberDecimal"
             android:minHeight="48dp"
-            android:text="@string/enter_temp_prompt" />
+            android:hint="@string/enter_temp_prompt" />
     </LinearLayout>
 
     <LinearLayout
@@ -96,7 +95,7 @@
             android:ems="10"
             android:inputType="text"
             android:minHeight="48dp"
-            android:text="@string/enter_note_prompt" />
+            android:hint="@string/enter_note_prompt" />
     </LinearLayout>
 
     <Button

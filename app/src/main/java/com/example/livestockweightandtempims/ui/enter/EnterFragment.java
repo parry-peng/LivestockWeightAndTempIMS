@@ -18,24 +18,34 @@ import com.example.livestockweightandtempims.entity.LivestockInfo;
 public class EnterFragment extends Fragment {
 
     private FragmentEnterBinding binding;
+    private EditText et_enter_id_value;
+    private EditText et_enter_weight_value;
+    private EditText et_enter_temp_value;
+    private EditText et_enter_note_value;
+    private Button btn_enter;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         EnterViewModel enterViewModel = new ViewModelProvider(this).get(EnterViewModel.class);
         binding = FragmentEnterBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final EditText et_enter_id_value = binding.etEnterIdValue;
-        final EditText et_enter_weight_value = binding.etEnterWeightValue;
-        final EditText et_enter_temp_value = binding.etEnterTempValue;
-        final EditText et_enter_note_value = binding.etEnterNoteValue;
-        final Button btn_enter = binding.btnEnter;
+        et_enter_id_value = binding.etEnterIdValue;
+        et_enter_weight_value = binding.etEnterWeightValue;
+        et_enter_temp_value = binding.etEnterTempValue;
+        et_enter_note_value = binding.etEnterNoteValue;
+        btn_enter = binding.btnEnter;
 
         btn_enter.setOnClickListener(v -> {
+            String et_enter_id = et_enter_id_value.getText().toString();
+            String et_enter_weight = et_enter_weight_value.getText().toString();
+            String et_enter_temp = et_enter_temp_value.getText().toString();
+            String et_enter_note = et_enter_note_value.getText().toString();
+
             LivestockInfo entity = new LivestockInfo();
-            entity.setId(Integer.parseInt(et_enter_id_value.getText().toString()));
-            entity.setWeight(Float.parseFloat(et_enter_weight_value.getText().toString()));
-            entity.setTemp(Float.parseFloat(et_enter_temp_value.getText().toString()));
-            entity.setNotes(et_enter_note_value.getText().toString());
+            entity.setId(Long.parseLong(et_enter_id));
+            entity.setWeight(Float.parseFloat(et_enter_weight));
+            entity.setTemp(Float.parseFloat(et_enter_temp));
+            entity.setNotes(et_enter_note);
             enterViewModel.insertLivestock(entity);
         });
 
