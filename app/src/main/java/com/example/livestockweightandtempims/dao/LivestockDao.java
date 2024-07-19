@@ -18,6 +18,10 @@ public interface LivestockDao {
     @Delete
     void delete(LivestockInfo... Livestock);
 
+    // 查询牲畜信息
+    @Query("SELECT * FROM LivestockInfo WHERE id = :id ORDER BY id DESC limit 1")
+    LivestockInfo queryById(long id);
+
     // 删除所有牲畜信息
     @Query("DELETE FROM LivestockInfo")
     void deleteAll();

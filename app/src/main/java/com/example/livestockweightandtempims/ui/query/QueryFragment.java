@@ -16,16 +16,13 @@ public class QueryFragment extends Fragment {
 
     private FragmentQueryBinding binding;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        QueryViewModel queryViewModel =
-                new ViewModelProvider(this).get(QueryViewModel.class);
-
+    public View onCreateView(@NonNull LayoutInflater inflater,ViewGroup container, Bundle savedInstanceState) {
+        QueryViewModel queryViewModel = new ViewModelProvider(this).get(QueryViewModel.class);
         binding = FragmentQueryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-//        final TextView textView = binding.textQuery;
-//        queryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+
+
         return root;
     }
 
