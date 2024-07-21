@@ -9,18 +9,13 @@ import java.util.List;
 
 public class HomepageViewModel extends ViewModel {
 
-    private final MutableLiveData<List<String>> mTexts;
+    private final MutableLiveData<String> mText;
 
     public HomepageViewModel() {
-        mTexts = new MutableLiveData<>();
-        List<String> texts = new ArrayList<>();
-        for (int i = 1; i <= 16; i++) {
-            texts.add("This is item # " + i);
-        }
-        mTexts.setValue(texts);
+        mText = new MutableLiveData<>();
     }
 
-    public LiveData<List<String>> getTexts() {
-        return mTexts;
+    public LiveData<String> getText() {
+        return mText;
     }
 }

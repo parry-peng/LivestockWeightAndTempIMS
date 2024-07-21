@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.livestockweightandtempims.R;
+import com.example.livestockweightandtempims.databinding.FragmentVideoBinding;
 import com.example.livestockweightandtempims.databinding.HomepageTransformBinding;
 import com.example.livestockweightandtempims.databinding.ItemTransformBinding;
 
@@ -32,18 +33,13 @@ public class HomepageFragment extends Fragment {
 
     private HomepageTransformBinding binding;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        HomepageViewModel homepageViewModel =
-                new ViewModelProvider(this).get(HomepageViewModel.class);
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        HomepageViewModel homepageViewModel = new ViewModelProvider(this).get(HomepageViewModel.class);
 
         binding = HomepageTransformBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        RecyclerView recyclerView = binding.recyclerviewTransform;
-        ListAdapter<String, TransformViewHolder> adapter = new TransformAdapter();
-        recyclerView.setAdapter(adapter);
-        homepageViewModel.getTexts().observe(getViewLifecycleOwner(), adapter::submitList);
+
         return root;
     }
 
@@ -53,66 +49,4 @@ public class HomepageFragment extends Fragment {
         binding = null;
     }
 
-    private static class TransformAdapter extends ListAdapter<String, TransformViewHolder> {
-
-        private final List<Integer> drawables = Arrays.asList(
-                R.drawable.avatar_1,
-                R.drawable.avatar_2,
-                R.drawable.avatar_3,
-                R.drawable.avatar_4,
-                R.drawable.avatar_5,
-                R.drawable.avatar_6,
-                R.drawable.avatar_7,
-                R.drawable.avatar_8,
-                R.drawable.avatar_9,
-                R.drawable.avatar_10,
-                R.drawable.avatar_11,
-                R.drawable.avatar_12,
-                R.drawable.avatar_13,
-                R.drawable.avatar_14,
-                R.drawable.avatar_15,
-                R.drawable.avatar_16);
-
-        protected TransformAdapter() {
-            super(new DiffUtil.ItemCallback<String>() {
-                @Override
-                public boolean areItemsTheSame(@NonNull String oldItem, @NonNull String newItem) {
-                    return oldItem.equals(newItem);
-                }
-
-                @Override
-                public boolean areContentsTheSame(@NonNull String oldItem, @NonNull String newItem) {
-                    return oldItem.equals(newItem);
-                }
-            });
-        }
-
-        @NonNull
-        @Override
-        public TransformViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            ItemTransformBinding binding = ItemTransformBinding.inflate(LayoutInflater.from(parent.getContext()));
-            return new TransformViewHolder(binding);
-        }
-
-        @Override
-        public void onBindViewHolder(@NonNull TransformViewHolder holder, int position) {
-            holder.textView.setText(getItem(position));
-            holder.imageView.setImageDrawable(
-                    ResourcesCompat.getDrawable(holder.imageView.getResources(),
-                            drawables.get(position),
-                            null));
-        }
-    }
-
-    private static class TransformViewHolder extends RecyclerView.ViewHolder {
-
-        private final ImageView imageView;
-        private final TextView textView;
-
-        public TransformViewHolder(ItemTransformBinding binding) {
-            super(binding.getRoot());
-            imageView = binding.imageViewItemTransform;
-            textView = binding.textViewItemTransform;
-        }
-    }
 }

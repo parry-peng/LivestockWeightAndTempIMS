@@ -1,10 +1,214 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/recyclerview_transform"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layoutManager="GridLayoutManager"
-    app:spanCount="4"
-    tools:context=".ui.homepage.HomepageFragment" />
+    android:orientation="horizontal"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_homepage_id_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:background="@drawable/border"
+                android:text="I D: "/>
+
+            <TextView
+                android:id="@+id/tv_homepage_id_val"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:background="@drawable/border"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_homepage_weight_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:background="@drawable/border"
+                android:text="重 量:"/>
+
+            <TextView
+                android:id="@+id/tv_homepage_weight_val"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_homepage_temp_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:layout_weight="1"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="温 度:"/>
+
+            <TextView
+                android:id="@+id/tv_homepage_temp_val"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="25dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_homepage_seven_temp_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:layout_weight="1"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="7日平均值:"/>
+
+            <TextView
+                android:id="@+id/tv_homepage_seven_temp_val"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="25dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_homepage_fourteen_temp_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:layout_weight="1"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="14日平均值:"/>
+
+            <TextView
+                android:id="@+id/tv_homepage_fourteen_temp_val"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="25dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_homepage_seven_temp_graph_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:text="7日曲线图:"/>
+
+            <TextView
+                android:id="@+id/tv_homepage_seven_temp_graph"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="曲线:"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_homepage_low_weight_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:text="体重偏轻:"/>
+
+            <TextView
+                android:id="@+id/tv_homepage_low_weight_val"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="23.5"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_homepage_high_temp_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:text="体温偏高:"/>
+
+            <TextView
+                android:id="@+id/tv_homepage_high_temp_val"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="23.5"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
