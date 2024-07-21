@@ -15,15 +15,12 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 public class QueryViewModel extends ViewModel {
-
     private final MutableLiveData<String> mText;
     private LivestockDao livestockDao;
     private final ExecutorService executorService = Executors.newSingleThreadExecutor();
-    LivestockInfo query_result;
 
     public QueryViewModel() {
         mText = new MutableLiveData<>();
-
         livestockDao = MyApplication.getInstance().getLivestockDB().livestockDao();
     }
 
@@ -31,17 +28,19 @@ public class QueryViewModel extends ViewModel {
         return mText;
     }
 
-    public void queryLivestock(long id) {
-        // 使用 Callable 来异步执行查询并获取结果
-        Callable<LivestockInfo> callable = () -> livestockDao.queryById(id);
-        Future<LivestockInfo> future = executorService.submit(callable);
-
-        // 调用 get 方法来获取查询结果，这个方法会阻塞直到结果可用
+    public LivestockInfo queryLivestock(long id) {
         try {
-            query_result = future.get();
-            // 处理结果
-        } catch (InterruptedException | ExecutionException e) {
-            // 处理异常
+            Callable<LivestockInfo> callable = () -> livestockDao.queryById(id);
+            Future<LivestockInfo> future = executorService.submit(callable);
+            return future.get(); // 这里会阻塞直到结果返回
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt(); // 保持中断状态
+            // 可以记录日志或者重新抛出异常
+            throw new RuntimeException("查询被中断", e);
+        } catch (ExecutionException e) {
+            // 处理查询过程中的异常
+            // 可以记录日志或者根据异常类型进行更具体的处理
+            throw new RuntimeException("查询执行异常", e);
         }
     }
 }

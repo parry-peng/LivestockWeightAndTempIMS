@@ -17,14 +17,25 @@
         android:padding="15dp">
 
         <EditText
-            android:id="@+id/query_search"
-            android:layout_width="match_parent"
+            android:id="@+id/query_id_value"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="4"
             android:background="@drawable/search_edit"
             android:drawableLeft="@drawable/ic_search_32dp"
             android:hint="查 询"
             android:minHeight="48dp"
             android:padding="7dp" />
+
+        <Button
+            android:id="@+id/btn_query"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:hint="查 询" />
+
+
 
     </LinearLayout>
 </LinearLayout>
