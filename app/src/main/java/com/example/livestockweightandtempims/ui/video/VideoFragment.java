@@ -24,8 +24,10 @@ public class VideoFragment extends Fragment {
         binding = FragmentVideoBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textVideo;
-        videoViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView_1 = binding.tvVideo1;
+        videoViewModel.getText().observe(getViewLifecycleOwner(), textView_1::setText);
+        final TextView textView_2 = binding.tvVideo2;
+        videoViewModel.getText().observe(getViewLifecycleOwner(), textView_2::setText);
         return root;
     }
 
