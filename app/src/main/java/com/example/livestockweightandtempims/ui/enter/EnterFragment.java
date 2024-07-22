@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -14,6 +15,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.livestockweightandtempims.databinding.FragmentEnterBinding;
 import com.example.livestockweightandtempims.entity.LivestockInfo;
+import com.example.livestockweightandtempims.util.ToastUtil;
 
 public class EnterFragment extends Fragment {
 
@@ -36,17 +38,22 @@ public class EnterFragment extends Fragment {
         btn_enter = binding.btnEnter;
 
         btn_enter.setOnClickListener(v -> {
-            String et_enter_id = et_enter_id_value.getText().toString();
-            String et_enter_weight = et_enter_weight_value.getText().toString();
-            String et_enter_temp = et_enter_temp_value.getText().toString();
+            long et_enter_id = Long.parseLong(et_enter_id_value.getText().toString());
+            float et_enter_weight = Float.parseFloat(et_enter_weight_value.getText().toString());
+            float et_enter_temp = Float.parseFloat(et_enter_temp_value.getText().toString());
             String et_enter_note = et_enter_note_value.getText().toString();
 
-            LivestockInfo entity = new LivestockInfo();
-            entity.setId(Long.parseLong(et_enter_id));
-            entity.setWeight(Float.parseFloat(et_enter_weight));
-            entity.setTemp(Float.parseFloat(et_enter_temp));
-            entity.setNotes(et_enter_note);
-            enterViewModel.insertLivestock(entity);
+            if (!enterViewModel.existsLivestock(et_enter_id))
+            {
+                LivestockInfo entity = new LivestockInfo();
+                entity.setId(et_enter_id);
+                entity.setWeight(et_enter_weight);
+                entity.setTemp(et_enter_temp);
+                entity.setNotes(et_enter_note);
+                enterViewModel.insertLivestock(entity);
+            }else{
+                ToastUtil.show(getContext(),"该数据已经被录入");
+            }
         });
 
         return root;

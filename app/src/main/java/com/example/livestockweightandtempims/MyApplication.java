@@ -14,7 +14,6 @@ public class MyApplication extends Application {
     public LivestockDatabase getLivestockDB() {
         return livestockDatabase;
     }
-
     @Override
     public void onCreate() {
         super.onCreate();

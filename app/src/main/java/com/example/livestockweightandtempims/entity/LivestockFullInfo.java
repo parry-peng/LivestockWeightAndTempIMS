@@ -4,12 +4,13 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity
-public class LivestockInfo {
+public class LivestockFullInfo {
     @PrimaryKey(autoGenerate = true)
     private long id;
-
     private float weight;
     private float temp;
+    private float temp_avg_7;
+    private float temp_avg_14;
     private String note;
 
     public long getId() {
@@ -36,20 +37,38 @@ public class LivestockInfo {
         this.temp = temp;
     }
 
-    public String getNotes() {
+    public float getTemp_avg_7() {
+        return temp_avg_7;
+    }
+
+    public void setTemp_avg_7(float temp_avg_7) {
+        this.temp_avg_7 = temp_avg_7;
+    }
+
+    public float getTemp_avg_14() {
+        return temp_avg_14;
+    }
+
+    public void setTemp_avg_14(float temp_avg_14) {
+        this.temp_avg_14 = temp_avg_14;
+    }
+
+    public String getNote() {
         return note;
     }
 
-    public void setNotes(String notes) {
-        this.note = notes;
+    public void setNote(String note) {
+        this.note = note;
     }
 
     @Override
     public String toString() {
-        return "LivestockInfo{" +
+        return "LivestockFullInfo{" +
                 "id=" + id +
                 ", weight=" + weight +
                 ", temp=" + temp +
+                ", temp_avg_7=" + temp_avg_7 +
+                ", temp_avg_14=" + temp_avg_14 +
                 ", note='" + note + '\'' +
                 '}';
     }

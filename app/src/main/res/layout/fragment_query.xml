@@ -34,8 +34,13 @@
             android:layout_weight="1"
             android:background="@color/white"
             android:hint="查 询" />
-
-
-
     </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_query"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+
 </LinearLayout>
