@@ -25,10 +25,24 @@
 
     <string name="enter_id_title">ID:</string>
     <string name="enter_id_prompt">请输入ID号</string>
-    <string name="enter_weight_title">体重:</string>
-    <string name="enter_weight_prompt">请输入体重</string>
-    <string name="enter_temp_title">体温:</string>
-    <string name="enter_temp_prompt">请输入体温</string>
+    <string name="enter_purchase_date">采购日期:</string>
+    <string name="enter_purchase_date_prompt">请输入采购日期</string>
+    <string name="enter_purchase_price">采购价格:</string>
+    <string name="enter_purchase_price_prompt">请输入采购价格</string>
+    <string name="enter_purchase_unit">采购单位:</string>
+    <string name="enter_purchase_unit_prompt">请输入采购单位</string>
+    <string name="enter_contact">联系人:</string>
+    <string name="enter_contact_prompt">请输入联系人</string>
+    <string name="enter_telephone">联系电话:</string>
+    <string name="enter_telephone_prompt">请输入联系电话</string>
+    <string name="enter_purchase_weight">体重:</string>
+    <string name="enter_purchase_weight_prompt">请输入体重(kg)</string>
+    <string name="enter_color">颜色:</string>
+    <string name="enter_color_prompt">请输入颜色</string>
+    <string name="enter_vaccination_status">接种情况:</string>
+    <string name="enter_vaccination_status_prompt">请选择疫苗接种情况</string>
+    <string name="enter_vaccination_date">接种时间:</string>
+    <string name="enter_vaccination_date_prompt">请输入疫苗接种时间</string>
     <string name="enter_note_title">备注:</string>
     <string name="enter_note_prompt">请输入备注</string>
 

@@ -36,7 +36,7 @@ public class QueryFragment extends Fragment {
 
             float query_weight = entity.getWeight();
             float query_temp = entity.getTemp();
-            String query_note = entity.getNotes();
+            String query_note = entity.getNote();
             Log.d("rick", String.valueOf(query_weight));
             Log.d("rick", String.valueOf(query_temp));
             Log.d("rick", query_note);

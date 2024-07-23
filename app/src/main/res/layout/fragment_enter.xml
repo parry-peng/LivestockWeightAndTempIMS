@@ -13,7 +13,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/tv_enter_id_title"
+            android:id="@+id/tv_enter_id"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
             android:text="@string/enter_id_title" />
 
         <EditText
-            android:id="@+id/et_enter_id_value"
+            android:id="@+id/et_enter_id"
             android:layout_width="0dp"
             android:layout_weight="2"
             android:layout_height="wrap_content"
@@ -41,17 +41,17 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/tv_enter_weight_title"
+            android:id="@+id/tv_enter_purchase_date"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:background="@drawable/border"
             android:textSize="25dp"
             android:gravity="center"
-            android:text="@string/enter_weight_title" />
+            android:text="@string/enter_purchase_date" />
 
         <EditText
-            android:id="@+id/et_enter_weight_value"
+            android:id="@+id/et_enter_purchase_date"
             android:layout_width="0dp"
             android:layout_weight="2"
             android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
             android:ems="10"
             android:inputType="numberDecimal"
             android:minHeight="48dp"
-            android:hint="@string/enter_weight_prompt" />
+            android:hint="@string/enter_purchase_date_prompt" />
     </LinearLayout>
 
     <LinearLayout
@@ -70,17 +70,17 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/tv_enter_temp_title"
+            android:id="@+id/tv_enter_purchase_price"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:background="@drawable/border"
             android:textSize="25dp"
             android:gravity="center"
-            android:text="@string/enter_temp_title" />
+            android:text="@string/enter_purchase_price" />
 
         <EditText
-            android:id="@+id/et_enter_temp_value"
+            android:id="@+id/et_enter_purchase_price"
             android:layout_width="0dp"
             android:layout_weight="2"
             android:layout_height="wrap_content"
@@ -90,7 +90,206 @@
             android:ems="10"
             android:inputType="numberDecimal"
             android:minHeight="48dp"
-            android:hint="@string/enter_temp_prompt" />
+            android:hint="@string/enter_purchase_price_prompt" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_enter_purchase_unit"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:text="@string/enter_purchase_unit" />
+
+        <EditText
+            android:id="@+id/et_enter_purchase_unit"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:hint="@string/enter_purchase_unit_prompt" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_enter_contact"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:text="@string/enter_contact" />
+
+        <EditText
+            android:id="@+id/et_enter_contact"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:hint="@string/enter_contact_prompt" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_enter_telephone"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:text="@string/enter_telephone" />
+
+        <EditText
+            android:id="@+id/et_enter_telephone"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:hint="@string/enter_telephone_prompt" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_enter_purchase_weight"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:text="@string/enter_purchase_weight" />
+
+        <EditText
+            android:id="@+id/et_enter_purchase_weight"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:hint="@string/enter_purchase_weight_prompt" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_enter_color"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:text="@string/enter_color" />
+
+        <EditText
+            android:id="@+id/et_enter_color"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:hint="@string/enter_color_prompt" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_enter_vaccination_status"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:text="@string/enter_vaccination_status" />
+
+        <Spinner
+            android:id="@+id/spinner_enter_vaccination_status"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:entries="@array/spinner"
+            style="@style/SpinnerStyle"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_enter_vaccination_date"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:text="@string/enter_vaccination_date" />
+
+        <EditText
+            android:id="@+id/et_enter_vaccination_date"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:hint="@string/enter_vaccination_date_prompt" />
     </LinearLayout>
 
     <LinearLayout
@@ -100,7 +299,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tv_enter_note_title"
+            android:id="@+id/tv_enter_note"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/border"
@@ -109,9 +308,9 @@
             android:text="@string/enter_note_title" />
 
         <EditText
-            android:id="@+id/et_enter_note_value"
+            android:id="@+id/et_enter_note"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/border"
             android:textSize="25dp"
             android:gravity="top|left"

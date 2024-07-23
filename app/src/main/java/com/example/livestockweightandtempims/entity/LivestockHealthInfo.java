@@ -1,16 +1,18 @@
 package com.example.livestockweightandtempims.entity;
 
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity
-public class LivestockInfo {
-    @PrimaryKey(autoGenerate = true)
+@Entity(tableName = "livestockHealthInfo", primaryKeys = {"id", "timestamp"})
+public class LivestockHealthInfo {
+    @ColumnInfo(name = "id")
     private long id;
-
     private float weight;
     private float temp;
-    private String note;
+
+    @ColumnInfo(name = "timestamp")
+    private int timestamp;
 
     public long getId() {
         return id;
@@ -36,21 +38,21 @@ public class LivestockInfo {
         this.temp = temp;
     }
 
-    public String getNote() {
-        return note;
+    public int getTimestamp() {
+        return timestamp;
     }
 
-    public void setNote(String note) {
-        this.note = note;
+    public void setTimestamp(int timestamp) {
+        this.timestamp = timestamp;
     }
 
     @Override
     public String toString() {
-        return "LivestockInfo{" +
+        return "livestockHealthInfo{" +
                 "id=" + id +
                 ", weight=" + weight +
                 ", temp=" + temp +
-                ", note='" + note + '\'' +
+                ", timestamp=" + timestamp +
                 '}';
     }
 }
